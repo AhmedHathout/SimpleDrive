@@ -1,6 +1,6 @@
 package com.ahmedhathout.SimpleDrive.listeners;
 
-import com.ahmedhathout.SimpleDrive.entities.files.UserFile;
+import com.ahmedhathout.SimpleDrive.entities.UserFile;
 
 public interface UserFileListener {
     void onUserFileCreated(UserFile userFile);
