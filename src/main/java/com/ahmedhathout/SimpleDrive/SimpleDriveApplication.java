@@ -1,6 +1,5 @@
 package com.ahmedhathout.SimpleDrive;
 
-import com.ahmedhathout.SimpleDrive.storage.StorageProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +11,6 @@ import org.thymeleaf.templateresolver.FileTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
 @SpringBootApplication
-@EnableConfigurationProperties(StorageProperties.class)
 public class SimpleDriveApplication {
 
 	@Autowired

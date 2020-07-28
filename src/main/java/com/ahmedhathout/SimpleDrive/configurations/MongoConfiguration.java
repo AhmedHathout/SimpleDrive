@@ -14,11 +14,8 @@ public class MongoConfiguration extends AbstractMongoClientConfiguration {
     @Value("${spring.profiles.active}")
     private String activeProfile;
 
-    @Value("${spring.data.mongodb.username}")
-    private String dbUsername;
-
-    @Value("${spring.data.mongodb.password}")
-    private String dbPassword;
+    @Value("${MongoDBUri}")
+    private String mongoDBUri;
 
     public String testDBName = "simple_drive_test_db";
     public String developmentDBName = "simple_drive_development_db";
@@ -37,7 +34,6 @@ public class MongoConfiguration extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        // TODO _Critical Add credentials
-        return MongoClients.create("mongodb://" + dbUsername + ":" + dbPassword + "@localhost:27017/?authSource=admin&readPreference=primary");
+        return MongoClients.create(mongoDBUri);
     }
 }

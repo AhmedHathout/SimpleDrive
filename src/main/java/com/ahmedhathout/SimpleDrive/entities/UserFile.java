@@ -19,8 +19,7 @@ import java.util.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class UserFile {
 
-    // Todo Do not hardcode shareable link prefix
-    private static final String SHAREABLE_LINK_PREFIX = "192.168.1.200:8080/files/get?shareableLink=";
+    private static final String SHAREABLE_LINK_PREFIX = "https://simpledrive2020.herokuapp.com/files/get?shareableLink=";
 
     @Id
     @Setter(AccessLevel.NONE)

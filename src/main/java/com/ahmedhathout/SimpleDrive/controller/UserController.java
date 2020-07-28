@@ -71,9 +71,8 @@ public class UserController {
         simpleMailMessage.setFrom("noreply@simpledrive.com"); // Looks like it does not matter what this from has
         simpleMailMessage.setTo(user.getEmail());
         simpleMailMessage.setSubject("Simple Drive Registration");
-        // TODO Replace with the application URL
         simpleMailMessage.setText("To confirm your account, please click here : "
-                + "http://192.168.1.200:8080/signup/confirm-account?email=" + user.getEmail() + "&token=" +
+                + "https://simpledrive2020.herokuapp.com/signup/confirm-account?email=" + user.getEmail() + "&token=" +
                 confirmationToken.getConfirmationToken());
 
         emailService.sendEmail(simpleMailMessage);
